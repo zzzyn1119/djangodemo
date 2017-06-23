@@ -14,7 +14,7 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_open_url(self):
         self.browser.get('http://localhost:8000')
-	#time.sleep(3)
+	time.sleep(3)
 	print self.browser.title 
 	self.assertIn('Django', self.browser.title)
 	#self.fail('Finished the test!')
