@@ -16,7 +16,9 @@ class HomePageTest(TestCase):
 	self.assertEqual(found.func, home_page)
 	
     def test_home_page_returns_correct_html(self):
+	# 创建一个HttpRequest对象
 	request = HttpRequest()
+	# 将对象传给home_page视图，得到响应
 	response = home_page(request)
 	self.assertTrue(response.content.startswith(b'<html>'))
 	self.assertIn(b'<title>To-Do lists</tilte>',response.content)
